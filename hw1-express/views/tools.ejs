@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <br><br>
+
+    <%- include("partials/header", {
+        pageTitle: "AI Tools",
+        subtitle: "Using a Node package to analyze AI-related text.",
+        activePage: activePage
+    }) %>
+
+    <main>
+        <section>
+            <h2>Node Package Data</h2>
+
+            <p>
+                This page uses the <strong>sentiment</strong> Node package to analyze an AI-related paragraph.
+                The package checks words in the paragraph and gives a sentiment score.
+            </p>
+
+            <h3>Paragraph Analyzed</h3>
+
+            <p>
+                <%= aiParagraph %>
+            </p>
+        </section>
+
+        <section>
+            <h2>Sentiment Results</h2>
+
+            <div class="three-column">
+                <article>
+                    <h3>Score</h3>
+                    <p><%= analysis.score %></p>
+                </article>
+
+                <article>
+                    <h3>Comparative</h3>
+                    <p><%= analysis.comparative %></p>
+                </article>
+
+                <article>
+                    <h3>Words Checked</h3>
+                    <p><%= analysis.tokens.length %></p>
+                </article>
+            </div>
+
+            <p>
+                <strong>Positive words:</strong>
+                <%= analysis.positive.length > 0 ? analysis.positive.join(", ") : "None" %>
+            </p>
+
+            <p>
+                <strong>Negative words:</strong>
+                <%= analysis.negative.length > 0 ? analysis.negative.join(", ") : "None" %>
+            </p>
+        </section>
+
+        <section class="sources">
+            <h2>Package Used</h2>
+
+            <p>
+                Node package:
+                <a href="https://www.npmjs.com/package/sentiment" target="_blank">
+                    sentiment
+                </a>
+            </p>
+        </section>
+    </main>
+
+    <%- include("partials/footer") %>
+
+</body>
+</html>
