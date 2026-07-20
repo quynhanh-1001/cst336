@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Midterm Exam | Otter Airlines</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="img/plane1.png" alt="Airplane">
+
+        <h1>Otter Airlines</h1>
+
+        <img src="img/plane2.png" alt="Airplane">
+    </header>
+
+    <main>
+
+        <h2>Summer 2026 Destinations</h2>
+
+        <section class="destination-container">
+
+            <div class="selection-panel">
+
+                <label for="countrySelect">
+                    Country:
+                </label>
+
+                <select id="countrySelect">
+                    <option value="">Select</option>
+                </select>
+
+                <label for="citySelect">
+                    City:
+                </label>
+
+                <select id="citySelect" disabled>
+                    <option value="">Select</option>
+                </select>
+
+            </div>
+
+            <div class="destination-panel">
+
+                <img
+                    id="destinationImage"
+                    src=""
+                    alt="Selected destination"
+                >
+
+                <h3 id="destinationName">
+                    Loading destination...
+                </h3>
+
+                <p>
+                    <strong>Roundtrip:</strong>
+
+                    <span id="destinationPrice"></span>
+                </p>
+
+                <p>
+                    <strong>Departures:</strong>
+                </p>
+
+                <div id="departureDates"></div>
+
+            </div>
+
+        </section>
+
+        <section class="flight-section">
+
+            <h2>Check flight status</h2>
+
+            <div class="flight-controls">
+
+                <input
+                    type="text"
+                    id="flightNumber"
+                    placeholder="Flight number, example OA101"
+                    maxlength="5"
+                >
+
+                <button id="statusButton">
+                    Status
+                </button>
+
+            </div>
+
+            <p id="flightError"></p>
+
+            <div id="flightStatus"></div>
+
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color:antiquewhite;
+    font-family: Arial, sans-serif;
+    color: #222222;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color:cadetblue;
+    color: white;
+    padding: 25px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+}
+
+main {
+    width: 80%;
+    margin: 30px auto;
+    flex: 1;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #cccccc;
+}
+
+label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+input {
+    font-size: 18px;
+    padding: 8px;
+    margin: 10px;
+}
+
+button {
+    background-color:cadetblue;
+    color: white;
+    font-size: 18px;
+    padding: 9px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:burlywood;
+}
+
+#errorMessage {
+    color: red;
+    font-weight: bold;
+    margin: 20px;
+}
+
+#weatherInfo {
+    display: none;
+    background-color: white;
+    width: 400px;
+    margin: 25px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #cccccc;
+}
+
+#temperatureImage {
+    width: 250px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: whitesmoke;
+    color: grey;
+    text-align: center;
+    font-size: 10px;
+    padding-bottom: 10px;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 10px;
+    margin: 6px 0;
+}
+
+footer hr {
+    border: none;
+    border-top: 1px solid #cccccc;
+    margin-bottom: 10px;
+}
+
+footer strong {
+    color: burlywood;
+}

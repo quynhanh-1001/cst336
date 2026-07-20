@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f4f7fb;
+    color: #222222;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+header {
+    width: 90%;
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 20px;
+    background-color: #063c92;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    border-radius: 8px;
+}
+
+header img {
+    width: 150px;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+main {
+    width: 90%;
+    max-width: 850px;
+    margin: 0 auto 40px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+main h2 {
+    font-size: 32px;
+}
+
+.destination-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.selection-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.selection-panel label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+select {
+    width: 190px;
+    padding: 9px;
+    font-size: 17px;
+    border: 1px solid #777777;
+    border-radius: 5px;
+}
+
+.destination-panel {
+    min-height: 350px;
+}
+
+#destinationImage {
+    width: 100%;
+    max-width: 330px;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: none;
+}
+
+.destination-panel h3 {
+    font-size: 25px;
+    margin: 12px 0 8px;
+}
+
+.destination-panel p {
+    margin: 8px;
+    font-size: 18px;
+}
+
+#departureDates p {
+    margin: 5px;
+}
+
+.flight-section {
+    margin-top: 45px;
+    padding-top: 30px;
+    border-top: 2px solid #dddddd;
+}
+
+.flight-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#flightNumber {
+    width: 260px;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid #777777;
+    border-radius: 5px;
+}
+
+#statusButton {
+    padding: 10px 22px;
+    background-color: #07883e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#statusButton:hover {
+    background-color: #056b31;
+}
+
+#flightError {
+    min-height: 24px;
+    color: red;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+#flightStatus {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 700px) {
+    header {
+        flex-direction: column;
+    }
+
+    .destination-container {
+        grid-template-columns: 1fr;
+    }
+
+    .flight-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+}

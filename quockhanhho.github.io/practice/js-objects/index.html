@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Practice</title>
+
+    <script>
+        // Create an Object
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue",
+            // siblings: ["Jim", "Jane"]
+            siblings: [
+                {
+                    firstName: "Jim",
+                    age: 23,
+                    eyeColor: "brown"
+                },
+                {
+                    firstName: "jane",
+                    age: 18,
+                    eyeColor: "green"
+                }
+            ]
+        };
+
+        // alert(person.lastName)
+        // alert(person["firstName"])  // another method
+        // alert(person.siblings[1]);  // Jane
+        alert(person.siblings[1].firstName);
+
+        // https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2026-02-01&endtime=2026-02-15&latitude=36.6&longitude=-121.9&maxradius=10&minmag=4.5
+        let data = {
+            "type": "FeatureCollection",
+            "metadata": {
+                "generated": 1783894778000,
+                "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2026-02-01&endtime=2026-02-15&latitude=36.6&longitude=-121.9&maxradius=10&minmag=3.5",
+                "title": "USGS Earthquakes",
+                "status": 200,
+                "api": "2.7.0",
+                "count": 11
+            },
+            "features": [
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "mag": 3.52,
+                        "place": "4 km NNW of West Valley City, Utah",
+                        "time": 1771032768660,
+                        "updated": 1778090031040,
+                        "tz": null,
+                        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uu80129556",
+                        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=uu80129556&format=geojson",
+                        "felt": 4121,
+                        "cdi": 3.6,
+                        "mmi": 3.668,
+                        "alert": null,
+                        "status": "reviewed",
+                        "tsunami": 0,
+                        "sig": 551,
+                        "net": "uu",
+                        "code": "80129556",
+                        "ids": ",uu80129556,us6000s94g,",
+                        "sources": ",uu,us,",
+                        "types": ",dyfi,moment-tensor,origin,phase-data,shakemap,",
+                        "nst": 64,
+                        "dmin": 0.007474,
+                        "rms": 0.18,
+                        "gap": 36,
+                        "magType": "ml",
+                        "type": "earthquake",
+                        "title": "M 3.5 - 4 km NNW of West Valley City, Utah"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-112.026666666667, 40.7243333333333, 9.29]
+                    },
+                    "id": "uu80129556"
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "mag": 3.87,
+                        "place": "8 km NW of Delta, B.C., MX",
+                        "time": 1770800212250,
+                        "updated": 1783022344537,
+                        "tz": null,
+                        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci10222374",
+                        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=ci10222374&format=geojson",
+                        "felt": 0,
+                        "cdi": 1,
+                        "mmi": 5.593,
+                        "alert": null,
+                        "status": "reviewed",
+                        "tsunami": 0,
+                        "sig": 230,
+                        "net": "ci",
+                        "code": "10222374",
+                        "ids": ",ci10222374,us6000s7uq,",
+                        "sources": ",ci,us,",
+                        "types": ",dyfi,nearby-cities,origin,phase-data,scitech-link,shakemap,",
+                        "nst": 27,
+                        "dmin": 0.0416,
+                        "rms": 0.32,
+                        "gap": 51,
+                        "magType": "ml",
+                        "type": "earthquake",
+                        "title": "M 3.9 - 8 km NW of Delta, B.C., MX"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-115.2625, 32.3985, 4.35]
+                    },
+                    "id": "ci10222374"
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "mag": 3.64,
+                        "place": "8 km WNW of Delta, B.C., MX",
+                        "time": 1770799236870,
+                        "updated": 1783021991509,
+                        "tz": null,
+                        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41395592",
+                        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=ci41395592&format=geojson",
+                        "felt": 1,
+                        "cdi": 3.8,
+                        "mmi": 4.516,
+                        "alert": null,
+                        "status": "reviewed",
+                        "tsunami": 0,
+                        "sig": 204,
+                        "net": "ci",
+                        "code": "41395592",
+                        "ids": ",ci41395592,us6000s7sl,",
+                        "sources": ",ci,us,",
+                        "types": ",dyfi,nearby-cities,origin,phase-data,scitech-link,shakemap,",
+                        "nst": 36,
+                        "dmin": 0.04327,
+                        "rms": 0.35,
+                        "gap": 51,
+                        "magType": "ml",
+                        "type": "earthquake",
+                        "title": "M 3.6 - 8 km WNW of Delta, B.C., MX"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-115.267666666667, 32.3898333333333, 3.3]
+                    },
+                    "id": "ci41395592"
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "mag": 4.18,
+                        "place": "6 km NW of Delta, B.C., MX",
+                        "time": 1770799113450,
+                        "updated": 1783500520925,
+                        "tz": null,
+                        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41395584",
+                        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=ci41395584&format=geojson",
+                        "felt": 15,
+                        "cdi": 3.6,
+                        "mmi": 4.441,
+                        "alert": "green",
+                        "status": "reviewed",
+                        "tsunami": 1,
+                        "sig": 274,
+                        "net": "ci",
+                        "code": "41395584",
+                        "ids": ",ew1770799120,us6000s7sh,ci41395584,at00taadc8,",
+                        "sources": ",ew,us,ci,at,",
+                        "types": ",dyfi,event-sequence,focal-mechanism,impact-link,losspager,nearby-cities,oaf,origin,phase-data,scitech-link,shake-alert,shakemap,",
+                        "nst": 38,
+                        "dmin": 0.05766,
+                        "rms": 0.41,
+                        "gap": 50,
+                        "magType": "ml",
+                        "type": "earthquake",
+                        "title": "M 4.2 - 6 km NW of Delta, B.C., MX"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-115.247833333333, 32.388, 8.1]
+                    },
+                    "id": "ci41395584"
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "mag": 3.67,
+                        "place": "8 km WNW of Cobb, CA",
+                        "time": 1770578265440,
+                        "updated": 1777646146040,
+                        "tz": null,
+                        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75310762",
+                        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc75310762&format=geojson",
+                        "felt": 28,
+                        "cdi": 5.3,
+                        "mmi": 4.164,
+                        "alert": null,
+                        "status": "reviewed",
+                        "tsunami": 0,
+                        "sig": 222,
+                        "net": "nc",
+                        "code": "75310762",
+                        "ids": ",nc75310762,us6000s7bk,",
+                        "sources": ",nc,us,",
+                        "types": ",dyfi,focal-mechanism,moment-tensor,nearby-cities,origin,phase-data,scitech-link,shakemap,",
+                        "nst": 108,
+                        "dmin": 0.01292,
+                        "rms": 0.07,
+                        "gap": 29,
+                        "magType": "mw",
+                        "type": "earthquake",
+                        "title": "M 3.7 - 8 km WNW of Cobb, CA"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-122.811666666667, 38.8455, 1.59]
+                    },
+                    "id": "nc75310762"
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "mag": 3.5,
+                        "place": "6 km WNW of Lehi, Utah",
+                        "time": 1770321190390,
+                        "updated": 1781931470641,
+                        "tz": null,
+                        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uu80128996",
+                        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=uu80128996&format=geojson",
+                        "felt": 2905,
+                        "cdi": 3.7,
+                        "mmi": 4.373,
+                        "alert": null,
+                        "status": "reviewed",
+                        "tsunami": 0,
+                        "sig": 558,
+                        "net": "uu",
+                        "code": "80128996",
+                        "ids": ",uu80128996,us6000s6sm,",
+                        "sources": ",uu,us,",
+                        "types": ",dyfi,moment-tensor,origin,phase-data,shakemap,",
+                        "nst": 58,
+                        "dmin": 0.02754,
+                        "rms": 0.2,
+                        "gap": 41,
+                        "magType": "ml",
+                        "type": "earthquake",
+                        "title": "M 3.5 - 6 km WNW of Lehi, Utah"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-111.9285, 40.4113333333333, 5.56]
+                    },
+                    "id": "uu80128996"
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "mag": 4.68,
+                        "place": "107 km W of Petrolia, CA",
+                        "time": 1770295770330,
+                        "updated": 1783601977262,
+                        "tz": null,
+                        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75308927",
+                        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc75308927&format=geojson",
+                        "felt": 184,
+                        "cdi": 3.8,
+                        "mmi": 2.922,
+                        "alert": "green",
+                        "status": "reviewed",
+                        "tsunami": 0,
+                        "sig": 407,
+                        "net": "nc",
+                        "code": "75308927",
+                        "ids": ",nc75308927,us6000s6kx,ew1770295770,",
+                        "sources": ",nc,us,ew,",
+                        "types": ",dyfi,event-sequence,losspager,moment-tensor,nearby-cities,oaf,origin,phase-data,scitech-link,shake-alert,shakemap,",
+                        "nst": 157,
+                        "dmin": 0.9133,
+                        "rms": 0.34,
+                        "gap": 245,
+                        "magType": "mw",
+                        "type": "earthquake",
+                        "title": "M 4.7 - 107 km W of Petrolia, CA"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-125.538, 40.4053333333333, 10]
+                    },
+                    "id": "nc75308927"
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "mag": 3.79,
+                        "place": "5 km SSE of San Ramon, CA",
+                        "time": 1770046065980,
+                        "updated": 1776977000040,
+                        "tz": null,
+                        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75305826",
+                        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc75305826&format=geojson",
+                        "felt": 650,
+                        "cdi": 3.9,
+                        "mmi": 4.108,
+                        "alert": null,
+                        "status": "reviewed",
+                        "tsunami": 0,
+                        "sig": 474,
+                        "net": "nc",
+                        "code": "75305826",
+                        "ids": ",nc75305826,us6000s5yq,",
+                        "sources": ",nc,us,",
+                        "types": ",dyfi,focal-mechanism,moment-tensor,nearby-cities,origin,phase-data,scitech-link,shakemap,",
+                        "nst": 186,
+                        "dmin": 0.03797,
+                        "rms": 0.22,
+                        "gap": 15,
+                        "magType": "mw",
+                        "type": "earthquake",
+                        "title": "M 3.8 - 5 km SSE of San Ramon, CA"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-121.949166666667, 37.7448333333333, 8.2]
+                    },
+                    "id": "nc75305826"
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "mag": 4.18,
+                        "place": "4 km SE of San Ramon, CA",
+                        "time": 1770044473640,
+                        "updated": 1783350686318,
+                        "tz": null,
+                        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75305736",
+                        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc75305736&format=geojson",
+                        "felt": 5030,
+                        "cdi": 4.6,
+                        "mmi": 5.161,
+                        "alert": "green",
+                        "status": "reviewed",
+                        "tsunami": 1,
+                        "sig": 729,
+                        "net": "nc",
+                        "code": "75305736",
+                        "ids": ",ew1770044470,nc75305736,at00t9u722,us6000s5ye,",
+                        "sources": ",ew,nc,at,us,",
+                        "types": ",dyfi,event-sequence,focal-mechanism,impact-link,losspager,moment-tensor,nearby-cities,oaf,origin,phase-data,scitech-link,shake-alert,shakemap,",
+                        "nst": 215,
+                        "dmin": 0.03179,
+                        "rms": 0.22,
+                        "gap": 16,
+                        "magType": "mw",
+                        "type": "earthquake",
+                        "title": "M 4.2 - 4 km SE of San Ramon, CA"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-121.943666666667, 37.7563333333333, 9.56]
+                    },
+                    "id": "nc75305736"
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "mag": 3.8,
+                        "place": "4 km SSE of San Ramon, CA",
+                        "time": 1770042420610,
+                        "updated": 1783397258770,
+                        "tz": null,
+                        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75305671",
+                        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc75305671&format=geojson",
+                        "felt": 1501,
+                        "cdi": 4,
+                        "mmi": 4.457,
+                        "alert": null,
+                        "status": "reviewed",
+                        "tsunami": 0,
+                        "sig": 622,
+                        "net": "nc",
+                        "code": "75305671",
+                        "ids": ",nc75305671,us6000s5y4,",
+                        "sources": ",nc,us,",
+                        "types": ",dyfi,focal-mechanism,moment-tensor,nearby-cities,origin,phase-data,scitech-link,shakemap,",
+                        "nst": 200,
+                        "dmin": 0.04192,
+                        "rms": 0.22,
+                        "gap": 15,
+                        "magType": "mw",
+                        "type": "earthquake",
+                        "title": "M 3.8 - 4 km SSE of San Ramon, CA"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-121.953333333333, 37.7485, 9.1]
+                    },
+                    "id": "nc75305671"
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "mag": 3.5,
+                        "place": "off the coast of Oregon",
+                        "time": 1770029928741,
+                        "updated": 1776977000040,
+                        "tz": null,
+                        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000s60q",
+                        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000s60q&format=geojson",
+                        "felt": null,
+                        "cdi": null,
+                        "mmi": null,
+                        "alert": null,
+                        "status": "reviewed",
+                        "tsunami": 0,
+                        "sig": 188,
+                        "net": "us",
+                        "code": "6000s60q",
+                        "ids": ",us6000s60q,",
+                        "sources": ",us,",
+                        "types": ",origin,phase-data,",
+                        "nst": 69,
+                        "dmin": 2.482,
+                        "rms": 0.57,
+                        "gap": 281,
+                        "magType": "ml",
+                        "type": "earthquake",
+                        "title": "M 3.5 - off the coast of Oregon"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-128.8757, 44.5238, 13.254]
+                    },
+                    "id": "us6000s60q"
+                }
+            ],
+            "bbox": [-128.8757, 32.388, 1.59, -111.9285, 44.5238, 13.254]
+        }
+
+        alert(data.features[9].properties.place);
+
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

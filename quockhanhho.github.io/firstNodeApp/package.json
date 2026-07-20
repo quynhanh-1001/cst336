@@ -1,0 +1,15 @@
+{
+  "name": "firstnodeapp",
+  "version": "1.0.0",
+  "description": "First Node App",
+  "license": "ISC",
+  "author": "Quoc Khanh Ho",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "underscore": "^1.13.8"
+  }
+}

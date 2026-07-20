@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Map</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Current Weather Checker</h1>
+        <p>Enter a city name to see the current weather.</p>
+    </header>
+
+    <main>
+        <form id="weatherForm">
+            <label for="cityInput">City Name:</label>
+            <input type="text" id="cityInput">
+            <button type="submit">Check Weather</button>
+        </form>
+
+        <div id="errorMessage"></div>
+
+        <section id="weatherInfo">
+            <h2 id="cityName"></h2>
+            <p id="temperature"></p>
+            <p id="description"></p>
+            <p id="humidity"></p>
+            <p id="wind"></p>
+            <img id="temperatureImage" src="" alt="">
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>Homework 3: Fetch and Web APIs</p>
+        <p>CST336 Internet Programming. 2026&copy; Ho</p>
+        <p><strong>Disclaimer:</strong> The information in this webpage is fictitious and used for academic purposes.
+        </p>
+    </footer>
+</body>
+
+</html>
