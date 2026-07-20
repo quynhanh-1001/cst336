@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artificial Intelligence Overview</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <br><br>
+
+    <%- include("partials/header", {
+        pageTitle: "Artificial Intelligence",
+        subtitle: "Exploring the fundamentals of artificial intelligence and its applications.",
+        activePage: activePage
+    }) %>
+
+    <main>
+        <section>
+            <h2>What is Artificial Intelligence?</h2>
+
+            <div class="two-column">
+                <div>
+                    <img class="page-image" src="/img/ai-overview.jpg" alt="AI Overview">
+                </div>
+
+                <div>
+                    <p>
+                        Artificial Intelligence, often called AI, is a field of computer science that focuses on creating
+                        computer systems that can perform tasks usually associated with human intelligence. These tasks can
+                        include learning from data, recognizing patterns, understanding language, solving problems, and making
+                        decisions.
+                    </p>
+
+                    <p>
+                        AI is important because it helps computers work with large amounts of information and find useful
+                        patterns. Today, AI is used in search engines, voice assistants, recommendation systems, medical tools,
+                        cybersecurity, education, and software development.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="api-box">
+            <h2>Web API Data</h2>
+            <p>
+                This section uses the Wikipedia REST API from the backend route in <strong>index.mjs</strong>.
+            </p>
+
+            <h3><%= wikiData.title %></h3>
+            <p><%= wikiData.extract %></p>
+
+            <a href="<%= wikiData.content_urls.desktop.page %>" target="_blank">
+                View Wikipedia Source
+            </a>
+        </section>
+    </main>
+
+    <%- include("partials/footer") %>
+
+</body>
+</html>
