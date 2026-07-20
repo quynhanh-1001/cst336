@@ -1,0 +1,87 @@
+header, main, nav, footer {
+    text-align: center;
+} 
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: center;
+}
+
+.two-column p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.page-image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+}
+
+.csumb-logo {
+    width: 150px;
+    height: auto;
+}
+
+nav a {
+    display: inline-block;
+    padding: 8px 14px;
+    margin: 0 8px;
+    background-color: aquamarine;
+    color: chocolate;
+    text-decoration: none;
+}
+
+nav a.active {
+    font-weight: bold;
+    background-color: chocolate;
+    color: white;
+}
+
+footer {
+    font-size: 13px;
+    color: darkorchid;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+    margin-left: 70px;
+    margin-right: 60px;
+}
+
+.three-column {
+    display: grid;                          /* use grid layout */
+    grid-template-columns: 1fr 1fr 1fr;     /* make 3 equal columns */
+    gap: 25px;                              /* space between columns */
+    margin: 20px 40px;                      /* space outside the whole section */
+} 
+
+.three-column article {
+    background-color: #f3f8ff;
+    padding: 18px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+}
+
+.three-column p {
+    font-size: 17px;
+    line-height: 1.6;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.robotics-list {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: left;
+    width: 80%;
+    margin-left: auto;
+}
