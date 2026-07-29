@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+    margin: 30px;
+    /* text-align: center; */
+}
+
+h1 {
+    color: darkblue;
+}
+
+form {
+    background-color: white;
+    border: 1px solid lightgray;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+input,
+select,
+button {
+    padding: 6px;
+    margin: 5px;
+}
+
+button {
+    background-color: darkblue;
+    color: white;
+    border: none;
+}
+
+a {
+    color: blue;
+}
+
+footer {
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+}
