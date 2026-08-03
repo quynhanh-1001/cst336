@@ -1,0 +1,64 @@
+<%- include("partials/header.ejs") %>
+
+<section class="content-card form-card">
+    <h1>Adding a New Author</h1>
+    <div class="card-divider"></div>
+
+    <form method="POST" action="/author/new">
+        <div class="form-row">
+            <label for="fName">First Name:</label>
+            <input type="text" id="fName" name="fName" required>
+        </div>
+
+        <div class="form-row">
+            <label for="lName">Last Name:</label>
+            <input type="text" id="lName" name="lName" required>
+        </div>
+
+        <div class="form-row">
+            <label for="birthDate">Date of Birth:</label>
+            <input type="date" id="birthDate" name="birthDate" required>
+        </div>
+
+        <div class="form-row">
+            <label for="deathDate">Date of Death:</label>
+            <input type="date" id="deathDate" name="deathDate">
+        </div>
+
+        <div class="form-row">
+            <span class="form-label">Sex:</span>
+            <div class="radio-group">
+                <label><input type="radio" name="sex" value="M" required> Male</label>
+                <label><input type="radio" name="sex" value="F"> Female</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="profession">Profession:</label>
+            <input type="text" id="profession" name="profession" required>
+        </div>
+
+        <div class="form-row">
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required>
+        </div>
+
+        <div class="form-row">
+            <label for="portrait">Portrait URL:</label>
+            <input type="text" id="portrait" name="portrait">
+        </div>
+
+        <div class="form-row">
+            <label for="biography">Biography:</label>
+            <textarea id="biography" name="biography"></textarea>
+        </div>
+
+        <button class="submit-button" type="submit">Add Author</button>
+    </form>
+
+    <% if (typeof message !== "undefined") { %>
+        <p class="success-message"><%= message %></p>
+    <% } %>
+</section>
+
+<%- include("partials/footer.ejs") %>

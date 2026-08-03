@@ -1,0 +1,305 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #d0d0d0;
+    color: #2b2b2b;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-layout {
+    display: flex;
+    width: 100%;
+    max-width: 1050px;
+    min-height: 560px;
+    margin: 35px auto 0;
+}
+
+.sidebar {
+    width: 210px;
+    background-color: #3f5f7c;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    min-height: 54px;
+    gap: 12px;
+    padding: 14px 16px;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+.sidebar-link img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+    background-color: #6b9ed1;
+}
+
+.main-content {
+    flex: 1;
+    padding: 18px 20px 45px;
+    background-color: #c8c8c8;
+}
+
+.content-card {
+    width: 100%;
+    padding: 26px 30px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.28);
+}
+
+.dashboard-card {
+    margin-top: 0;
+}
+
+.content-card h1 {
+    margin: 0;
+    font-size: 29px;
+    font-weight: 600;
+}
+
+.card-divider {
+    height: 1px;
+    margin: 18px 0 28px;
+    background-color: #e4e4e4;
+}
+
+.dashboard-buttons {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.dashboard-button {
+    display: flex;
+    width: 135px;
+    min-height: 72px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 12px;
+    color: #222222;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.35;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dashboard-button img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.display-button {
+    background-color: #f6be32;
+}
+
+.add-button {
+    color: white;
+    background-color: #52ad58;
+}
+
+.add-button img {
+    filter: brightness(0) invert(1);
+}
+
+.dashboard-button:hover {
+    opacity: 0.85;
+}
+
+.form-card,
+.list-card {
+    max-width: 760px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 155px 1fr;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 16px;
+}
+
+.form-row label,
+.form-label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 9px 10px;
+    border: 1px solid #b8b8b8;
+    border-radius: 3px;
+    font: inherit;
+}
+
+textarea {
+    min-height: 105px;
+    resize: vertical;
+}
+
+.radio-group {
+    display: flex;
+    gap: 25px;
+}
+
+.radio-group label {
+    font-weight: normal;
+}
+
+.radio-group input {
+    width: auto;
+    margin-right: 5px;
+}
+
+.submit-button {
+    margin-left: 170px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #4e9b50;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #3d7e3f;
+}
+
+.success-message {
+    margin: 22px 0 0 170px;
+    color: #26752b;
+    font-weight: bold;
+}
+
+.record-row,
+.quote-record {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 15px 0;
+    border-bottom: 1px solid #dddddd;
+}
+
+.record-title {
+    flex: 1;
+    font-size: 17px;
+}
+
+.record-actions {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.edit-button,
+.delete-button {
+    padding: 7px 11px;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.edit-button {
+    background-color: #4f8bc5;
+}
+
+.delete-button {
+    background-color: #c94c4c;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    opacity: 0.82;
+}
+
+.quote-record {
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.quote-text {
+    width: 100%;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.quote-details {
+    flex: 1;
+    line-height: 1.55;
+}
+
+footer {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 18px;
+    background-color: white;
+    border-top: 1px solid #b7b7b7;
+    text-align: center;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 760px) {
+    .app-layout {
+        display: block;
+        margin-top: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar-nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-content {
+        padding: 18px;
+    }
+
+    .form-row {
+        display: block;
+    }
+
+    .form-row label,
+    .form-label {
+        display: block;
+        margin-bottom: 6px;
+    }
+
+    .submit-button,
+    .success-message {
+        margin-left: 0;
+    }
+
+    .record-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .record-actions {
+        margin-left: 0;
+    }
+}

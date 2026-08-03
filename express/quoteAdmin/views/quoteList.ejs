@@ -1,0 +1,31 @@
+<%- include("partials/header.ejs") %>
+
+<section class="content-card list-card">
+    <h1>Update/Delete Quotes</h1>
+    <div class="card-divider"></div>
+
+    <% if (quotes.length === 0) { %>
+        <p>No quotes found.</p>
+    <% } %>
+
+    <% for (let quote of quotes) { %>
+        <div class="quote-record">
+            <div class="quote-text">“<%= quote.quote %>”</div>
+
+            <div class="quote-details">
+                <strong>Author:</strong> <%= quote.firstName %> <%= quote.lastName %>
+                <br>
+                <strong>Category:</strong> <%= quote.category %>
+                <br>
+                <strong>Likes:</strong> <%= quote.likes %>
+            </div>
+
+            <div class="record-actions">
+                <a class="edit-button" href="/quote/edit?quoteId=<%= quote.quoteId %>">Update</a>
+                <a class="delete-button" href="/quote/delete?quoteId=<%= quote.quoteId %>">Delete</a>
+            </div>
+        </div>
+    <% } %>
+</section>
+
+<%- include("partials/footer.ejs") %>

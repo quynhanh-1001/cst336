@@ -1,0 +1,25 @@
+<%- include("partials/header.ejs") %>
+
+<section class="content-card list-card">
+    <h1>Update/Delete Authors</h1>
+    <div class="card-divider"></div>
+
+    <% if (authors.length === 0) { %>
+        <p>No authors found.</p>
+    <% } %>
+
+    <% for (let author of authors) { %>
+        <div class="record-row">
+            <div class="record-title">
+                <%= author.firstName %> <%= author.lastName %>
+            </div>
+
+            <div class="record-actions">
+                <a class="edit-button" href="/author/edit?authorId=<%= author.authorId %>">Update</a>
+                <a class="delete-button" href="/author/delete?authorId=<%= author.authorId %>">Delete</a>
+            </div>
+        </div>
+    <% } %>
+</section>
+
+<%- include("partials/footer.ejs") %>

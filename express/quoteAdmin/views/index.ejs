@@ -1,0 +1,31 @@
+<%- include("partials/header.ejs") %>
+
+<section class="content-card dashboard-card">
+    <h1>Admin Section</h1>
+
+    <div class="card-divider"></div>
+
+    <div class="dashboard-buttons">
+        <a class="dashboard-button display-button" href="/authors">
+            <img src="/img/listAuthors.png" alt="">
+            <span>Display<br>Authors</span>
+        </a>
+
+        <a class="dashboard-button add-button" href="/author/new">
+            <img src="/img/addAuthor.png" alt="">
+            <span>Add<br>Authors</span>
+        </a>
+
+        <a class="dashboard-button display-button" href="/quotes">
+            <img src="/img/listQuotes.png" alt="">
+            <span>Display<br>Quotes</span>
+        </a>
+
+        <a class="dashboard-button add-button" href="/quote/new">
+            <img src="/img/addQuote.png" alt="">
+            <span>Add<br>Quotes</span>
+        </a>
+    </div>
+</section>
+
+<%- include("partials/footer.ejs") %>

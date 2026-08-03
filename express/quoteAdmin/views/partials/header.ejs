@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous Quotes Admin</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a class="sidebar-link <%= currentPath === '/' ? 'active' : '' %>" href="/">
+                    <img src="/img/home.svg" alt="">
+                    <span>Home</span>
+                </a>
+
+                <a class="sidebar-link <%= currentPath === '/authors' || currentPath === '/author/edit' ? 'active' : '' %>" href="/authors">
+                    <img src="/img/listAuthors.png" alt="">
+                    <span>All Authors</span>
+                </a>
+
+                <a class="sidebar-link <%= currentPath === '/author/new' ? 'active' : '' %>" href="/author/new">
+                    <img src="/img/addAuthor.png" alt="">
+                    <span>Add Author</span>
+                </a>
+
+                <a class="sidebar-link <%= currentPath === '/quotes' || currentPath === '/quote/edit' ? 'active' : '' %>" href="/quotes">
+                    <img src="/img/listQuotes.png" alt="">
+                    <span>All Quotes</span>
+                </a>
+
+                <a class="sidebar-link <%= currentPath === '/quote/new' ? 'active' : '' %>" href="/quote/new">
+                    <img src="/img/addQuote.png" alt="">
+                    <span>New Quote</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
